@@ -24,10 +24,9 @@
 
         .ui-dialog .ui-dialog-content {
             border: 0;
-            padding: 20px;
-            font-size: 18px;
-            color: #CAAD75;
-            background-color: #FDF8E4;
+            font-size: 12px;
+            color: #ffffff;
+            background-color: lightcoral;
             overflow: auto;
         }
 
@@ -92,8 +91,8 @@
             $("#j_dialog").dialog({
                 autoOpen: true,
                 modal: true,
-                width: 350,
-                height: 300,
+                width: 340,
+                height: 230,
                 open: function() {
                     jQuery('.ui-widget-overlay').on('click', function() {
                         jQuery('#j_dialog').dialog('close');
