@@ -1,6 +1,8 @@
 //const QueryCountry = document.getElementById("inputQ").value;
 //const QueryCountry = window.prompt(document.getElementById("inputQ").value);
 //console.log(QueryCountry);
+
+
 const amerika = "US";
  
 //Global Data
@@ -19,7 +21,7 @@ $(".fa-instagram").click(function(){
     window.location.href ="https://www.instagram.com/_______the_wrong_guy__________/";
 });
 
-
+//on-keypress
 $('.search-input').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
@@ -36,6 +38,11 @@ function DataFetchCovid() {
     const QueryCountry = document.getElementById("inputQ").value;
     
     const QueryAPIready = QueryCountry[0].toUpperCase() + QueryCountry.slice(1).toLowerCase();
+    
+    var changeCountry = document.getElementById("couName");
+    
+    changeCountry.innerHTML = QueryAPIready;
+    
     fetch("https://pomber.github.io/covid19/timeseries.json")
         .then(res => res.json())
         .then(data => {
