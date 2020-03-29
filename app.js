@@ -36,27 +36,25 @@ $('.search-input').keypress(function(event){
 function DataFetchCovid() {
     
     const QueryCountry = document.getElementById("inputQ").value;
-//    function que(){
+
     var QueryAPIready = QueryCountry[0].toUpperCase() + QueryCountry.slice(1).toLowerCase();
-//    if(QueryAPIready == "Us" || "Usa")
-//        {
-//            QueryAPIready = "US";
-//            return de(QueryAPIready);
-//        }
-//    else
-//        {
-//            QueryAPIready = QueryAPIready;
-//            return de(QueryAPIready);
-//        }
-//    }
-    var changeCountry = document.getElementById("couName");
     
-        changeCountry.innerHTML = QueryAPIready;
+    var a = QueryAPIready;
     
-    fetch("https://pomber.github.io/covid19/timeseries.json")
+    console.log(a);
+    
+    var amer = "Us";
+    
+    if(a == amer)
+        {
+            a = "US";
+            var changeCountry = document.getElementById("couName");
+    
+        changeCountry.innerHTML = a;
+            fetch("https://pomber.github.io/covid19/timeseries.json")
         .then(res => res.json())
         .then(data => {
-            const toFind = data[QueryAPIready];
+            const toFind = data[a];
             const lengthOfTheArray = toFind.length - 1;
             const Trecovered = toFind[lengthOfTheArray].recovered;
             const Tdea = toFind[lengthOfTheArray].deaths;
@@ -76,6 +74,62 @@ function DataFetchCovid() {
         .catch((err) =>{
         alert("Yo enter a valid country");
     })
+        }
+    else{
+        var changeCountry = document.getElementById("couName");
+    
+        changeCountry.innerHTML = a;
+        fetch("https://pomber.github.io/covid19/timeseries.json")
+        .then(res => res.json())
+        .then(data => {
+            const toFind = data[a];
+            const lengthOfTheArray = toFind.length - 1;
+            const Trecovered = toFind[lengthOfTheArray].recovered;
+            const Tdea = toFind[lengthOfTheArray].deaths;
+            const Tconfirmed = toFind[lengthOfTheArray].confirmed;
+
+            //passing the data
+             totalCountryCases.innerHTML = Tconfirmed;
+             totalCountryDea.innerHTML = Tdea;
+             totalCountryRecovered.innerHTML =Trecovered;
+
+
+
+            console.log(Trecovered);
+            console.log(Tdea);
+            console.log(Tconfirmed);
+        })
+        .catch((err) =>{
+        alert("Yo enter a valid country");
+    })
+    }
+    
+    
+    
+    
+//    fetch("https://pomber.github.io/covid19/timeseries.json")
+//        .then(res => res.json())
+//        .then(data => {
+//            const toFind = data[QueryAPIready];
+//            const lengthOfTheArray = toFind.length - 1;
+//            const Trecovered = toFind[lengthOfTheArray].recovered;
+//            const Tdea = toFind[lengthOfTheArray].deaths;
+//            const Tconfirmed = toFind[lengthOfTheArray].confirmed;
+//
+//            //passing the data
+//             totalCountryCases.innerHTML = Tconfirmed;
+//             totalCountryDea.innerHTML = Tdea;
+//             totalCountryRecovered.innerHTML =Trecovered;
+//
+//
+//
+//            console.log(Trecovered);
+//            console.log(Tdea);
+//            console.log(Tconfirmed);
+//        })
+//        .catch((err) =>{
+//        alert("Yo enter a valid country");
+//    })
 }
 
 function worldData() {
