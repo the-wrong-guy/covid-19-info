@@ -231,6 +231,11 @@ label{
     .search-form{
         max-width: 19rem;
     }
+    
+    .search-input {
+    width: 250px;
+    height: 20px;
+}
 
 
 }

@@ -36,12 +36,22 @@ $('.search-input').keypress(function(event){
 function DataFetchCovid() {
     
     const QueryCountry = document.getElementById("inputQ").value;
-    
-    const QueryAPIready = QueryCountry[0].toUpperCase() + QueryCountry.slice(1).toLowerCase();
-    
+//    function que(){
+    var QueryAPIready = QueryCountry[0].toUpperCase() + QueryCountry.slice(1).toLowerCase();
+//    if(QueryAPIready == "Us" || "Usa")
+//        {
+//            QueryAPIready = "US";
+//            return de(QueryAPIready);
+//        }
+//    else
+//        {
+//            QueryAPIready = QueryAPIready;
+//            return de(QueryAPIready);
+//        }
+//    }
     var changeCountry = document.getElementById("couName");
     
-    changeCountry.innerHTML = QueryAPIready;
+        changeCountry.innerHTML = QueryAPIready;
     
     fetch("https://pomber.github.io/covid19/timeseries.json")
         .then(res => res.json())
@@ -63,7 +73,9 @@ function DataFetchCovid() {
             console.log(Tdea);
             console.log(Tconfirmed);
         })
-        .catch((err) => console.log(err))
+        .catch((err) =>{
+        alert("Yo enter a valid country");
+    })
 }
 
 function worldData() {
