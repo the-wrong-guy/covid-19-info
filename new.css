@@ -234,6 +234,10 @@
                 justify-content: center;
             }
             
+            *{
+                font-size: 10px;
+            }
+            
             .title h3{
                 font-size: 1em;
             }
