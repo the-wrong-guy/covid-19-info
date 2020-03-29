@@ -1,7 +1,7 @@
         @import url("https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap");
 
         :root {
-            --primary-color: #FF6F91;
+            --primary-color: #8ee41b;
             --dark-color: #3a3a3a;
             --light-color: #ffffff;
         }
@@ -76,11 +76,11 @@
             filter: drop-shadow(3px 3px 5px #3a3a3a);
             stroke-opacity: 1;
             width: 100%;
-                        animation: map 1s;
+            animation: map 1s;
         }
 
         .map path {
-            fill: deeppink;
+            fill: #8ee41b;
             transition: 0.5s;
             position: absolute;
         }
@@ -89,26 +89,28 @@
             fill: #ffffff;
         }
 
-        
+
         @keyframes map {
-            0%{
+            0% {
                 transform: translateY(50px);
                 stroke-opacity: 0.2;
                 shape-margin: 10px;
                 opacity: 0.1;
             }
-            50%{
+
+            50% {
                 stroke-opacity: 0.5;
                 opacity: 0.5;
             }
-            100%{
+
+            100% {
                 stroke-opacity: 1;
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-/*Bar*/
+        /*Bar*/
 
         .loader {
             position: absolute;
@@ -233,21 +235,26 @@
                 display: flex;
                 justify-content: center;
             }
-            
-            *{
+
+            * {
                 font-size: 10px;
             }
-            
-            .title h3{
+
+            .title h3 {
                 font-size: 1em;
             }
 
             .result {
                 max-width: 400px;
                 position: relative;
-                top: -4em
             }
 
+            .result .result-title {
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
 
             .container {
                 flex-direction: column;
