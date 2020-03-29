@@ -222,6 +222,11 @@ label{
 /* responsive */
 
 @media(max-width:450px){
+    
+    body,html{
+        overflow-x: hidden;
+        min-height: 50%;
+    }
 
     .search-form{
         max-width: 19rem;
