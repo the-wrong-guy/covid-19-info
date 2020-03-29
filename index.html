@@ -2,63 +2,127 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>COVID-19</title>
-	<meta name="Bhargab" content="Covid-19">
-	<meta name="COVID-19" content="INFORMATING">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <title>COVID-19</title>
+    <meta name="Bhargab" content="Covid-19">
+    <meta name="COVID-19" content="INFORMATI0N">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .ui-dialog {
+            width: 20px;
+            height: 30px;
+        }
+
+        .ui-dialog .ui-dialog-titlebar {
+            color: deeppink
+        }
+
+        .ui-dialog .ui-dialog-content {
+            border: 0;
+            padding: 20px;
+            font-size: 18px;
+            color: #CAAD75;
+            background-color: #FDF8E4;
+            overflow: auto;
+        }
+
+    </style>
 </head>
 
 <body>
-  <div class="wrapper">
-      <div class="loader_bg">
-          <div class="loader"></div>
-      </div>
-    <header>
-        <h2>COVID-19 INFO</h2>
-    </header>
-    <form id="Globalinfo">
-        <div class="Sinfo"><label>Global Total Cases</label><span class="ispan  ispan-1" id="Total-cases"></span></div>
-        <div class="Sinfo"><label>Global Total Death</label><span class="ispan ispan-2" id="Total-dea"></span></div>
-        <div class="Sinfo"><label>Global Total Recovered</label><span class="ispan ispan-3" id="Total-recovered"></span></div>
-    </form>
-    <h3 class="title">Search By Country</h3>
-    <div class="query">
-        <div class="search-form">
-            <input type="search"  placeholder="Search" id="inputQ" class="search-input">
-            <button  class="search-button">
-              <svg class="submit-button">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
-              </svg>
-            </button>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
-            <symbol id="search" viewBox="0 0 32 32">
-              <path d="M 19.5 3 C 14.26514 3 10 7.2651394 10 12.5 C 10 14.749977 10.810825 16.807458 12.125 18.4375 L 3.28125 27.28125 L 4.71875 28.71875 L 13.5625 19.875 C 15.192542 21.189175 17.250023 22 19.5 22 C 24.73486 22 29 17.73486 29 12.5 C 29 7.2651394 24.73486 3 19.5 3 z M 19.5 5 C 23.65398 5 27 8.3460198 27 12.5 C 27 16.65398 23.65398 20 19.5 20 C 15.34602 20 12 16.65398 12 12.5 C 12 8.3460198 15.34602 5 19.5 5 z" />
-            </symbol>
-          </svg>
+    <div class="wrapper">
+
+        <div class="loader_bg">
+            <div class="loader"></div>
+        </div>
+
+        <div id="j_dialog" title="Important Info">
+            <p>To search details about USA ,type/enter US instead US,America or United states of america<br><br>
+                All the information are not 100% accurate,just like Dettol kills only 99.9% germs
+            </p>
+        </div>
+        <header>
+            <h2>COVID-19 INFO</h2>
+        </header>
+        <form id="Globalinfo">
+            <div class="Sinfo"><label>Global Total Cases</label><span class="ispan  ispan-1" id="Total-cases"></span></div>
+            <div class="Sinfo"><label>Global Total Death</label><span class="ispan ispan-2" id="Total-dea"></span></div>
+            <div class="Sinfo"><label>Global Total Recovered</label><span class="ispan ispan-3" id="Total-recovered"></span></div>
+        </form>
+        <h3 class="title">Search By Country</h3>
+        <div class="query">
+            <div class="search-form">
+                <input type="search" placeholder="Search" id="inputQ" class="search-input">
+                <button class="search-button">
+                    <svg class="submit-button">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+                    </svg>
+                </button>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+                <symbol id="search" viewBox="0 0 32 32">
+                    <path d="M 19.5 3 C 14.26514 3 10 7.2651394 10 12.5 C 10 14.749977 10.810825 16.807458 12.125 18.4375 L 3.28125 27.28125 L 4.71875 28.71875 L 13.5625 19.875 C 15.192542 21.189175 17.250023 22 19.5 22 C 24.73486 22 29 17.73486 29 12.5 C 29 7.2651394 24.73486 3 19.5 3 z M 19.5 5 C 23.65398 5 27 8.3460198 27 12.5 C 27 16.65398 23.65398 20 19.5 20 C 15.34602 20 12 16.65398 12 12.5 C 12 8.3460198 15.34602 5 19.5 5 z" />
+                </symbol>
+            </svg>
+
+        </div>
+        <form id="Countryinfo">
+            <span id="couName"></span>
+            <div class="Cinfo"><label>Total Cases</label><span class="Cspan  Cspan-1" id="Total-cases-co"></span></div>
+            <div class="Cinfo"><label>Total Death</label><span class="Cspan Cspan-2" id="Total-dea-co"></span></div>
+            <div class="Cinfo"><label>Total Recovered</label><span class="Cspan Cspan-3" id="Total-recovered-co"></span></div>
+        </form>
+        <div><a href="map.html">click</a></div>
+        <footer id="credits">
+            <p>Made by Bhargab, follow me<i class="fab fa-instagram"></i></p>
+        </footer>
     </div>
-    <form id="Countryinfo">
-      <span id="couName" ></span>
-      <div class="Cinfo"><label>Total Cases</label><span class="Cspan  Cspan-1" id="Total-cases-co"></span></div>
-      <div class="Cinfo"><label>Total Death</label><span class="Cspan Cspan-2" id="Total-dea-co"></span></div>
-      <div class="Cinfo"><label>Total Recovered</label><span class="Cspan Cspan-3" id="Total-recovered-co"></span></div>
-  </form>
-      <div><a href="map.html">click</a></div>
-    <footer id="credits"><p>Made by Bhargab, follow me<i class="fab fa-instagram"></i></p></footer>
- </div>   
-    <script
-   defer src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+
     <script>
-        setTimeout(function(){
+        setTimeout(function() {
             $('.loader_bg').fadeOut();
-        },1500);
+        }, 1500);
+
+        $(function() {
+            $("#j_dialog").dialog({
+                autoOpen: true,
+                modal: true,
+                width: 350,
+                height: 300,
+                open: function() {
+                    jQuery('.ui-widget-overlay').on('click', function() {
+                        jQuery('#j_dialog').dialog('close');
+                    })
+                },
+
+                buttons: {
+                    Ok: function() {
+                        $(this).dialog("close");
+                    }
+                },
+                show: {
+                    effect: "bounce",
+                    duration: 1500
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 1000
+                }
+
+            });
+        });
+        $(".selector").dialog({
+            closeOnEscape: false
+        });
+
     </script>
-    <script  defer src="app.js"></script>
-    
+    <script defer src="app.js"></script>
+
 </body>
+
 </html>
