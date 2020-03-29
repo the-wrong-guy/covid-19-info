@@ -1,0 +1,266 @@
+        @import url("https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap");
+
+        :root {
+            --primary-color: #FF6F91;
+            --dark-color: #3a3a3a;
+            --light-color: #ffffff;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-color);
+        }
+
+        .py {
+            padding: 20px 0;
+        }
+
+        .px {
+            padding: 0 20px;
+        }
+
+        .my {
+            margin: 20px 0;
+        }
+
+        .mx {
+            margin: 0 2px;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 100px;
+        }
+
+        .result {
+            width: 400px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: darkorange;
+        }
+
+        .result-title {
+            font-size: 3em;
+            color: var(--light-color);
+        }
+
+        .result-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .result-title tr,
+        .result-table td {
+            padding: 10px 15px;
+            color: var(--light-color);
+            font-size: 1.5em;
+        }
+
+
+        .map {}
+
+        .map svg {
+            height: 100%;
+            position: relative;
+            filter: drop-shadow(3px 3px 5px #3a3a3a);
+            stroke-opacity: 1;
+            width: 100%;
+                        animation: map 1s;
+        }
+
+        .map path {
+            fill: deeppink;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        .map path:hover {
+            fill: #ffffff;
+        }
+
+        
+        @keyframes map {
+            0%{
+                transform: translateY(50px);
+                stroke-opacity: 0.2;
+                shape-margin: 10px;
+                opacity: 0.1;
+            }
+            50%{
+                stroke-opacity: 0.5;
+                opacity: 0.5;
+            }
+            100%{
+                stroke-opacity: 1;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+/*Bar*/
+
+        .loader {
+            position: absolute;
+            top: 0;
+            height: 4px;
+            display: block;
+            width: 100%;
+            background-color: #FF6F9160;
+            border-radius: 2px;
+            background-clip: padding-box;
+            margin: 0.5rem 0 1rem 0;
+            overflow: hidden;
+        }
+
+        .loader .indeterminate {
+            background-color: #FF6F9190;
+        }
+
+        .loader .indeterminate:before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+            animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+        }
+
+        .loader .indeterminate:after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            will-change: left, right;
+            -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            -webkit-animation-delay: 1.15s;
+            animation-delay: 1.15s;
+        }
+
+        @-webkit-keyframes indeterminate {
+            0% {
+                left: -35%;
+                right: 100%;
+            }
+
+            60% {
+                left: 100%;
+                right: -90%;
+            }
+
+            100% {
+                left: 100%;
+                right: -90%;
+            }
+        }
+
+        @keyframes indeterminate {
+            0% {
+                left: -35%;
+                right: 100%;
+            }
+
+            60% {
+                left: 100%;
+                right: -90%;
+            }
+
+            100% {
+                left: 100%;
+                right: -90%;
+            }
+        }
+
+        @-webkit-keyframes indeterminate-short {
+            0% {
+                left: -200%;
+                right: 100%;
+            }
+
+            60% {
+                left: 107%;
+                right: -8%;
+            }
+
+            100% {
+                left: 107%;
+                right: -8%;
+            }
+        }
+
+        @keyframes indeterminate-short {
+            0% {
+                left: -200%;
+                right: 100%;
+            }
+
+            60% {
+                left: 107%;
+                right: -8%;
+            }
+
+            100% {
+                left: 107%;
+                right: -8%;
+            }
+        }
+
+        loader end ::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            .title {
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .title h3{
+                font-size: 1em;
+            }
+
+            .result {
+                max-width: 400px;
+                position: relative;
+                top: -4em
+            }
+
+
+
+            * {
+                font-size: 10px;
+            }
+
+            .container {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                padding: 5px;
+            }
+
+            .result-title {
+                text-align: center;
+                font-size: 3em !important;
+            }
+
+
+        }
