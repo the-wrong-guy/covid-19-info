@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
     <style>
-
+        
         .ui-dialog .ui-dialog-titlebar {
             color: red;
         }
@@ -35,7 +35,7 @@
         <div class="indeterminate"></div>
     </div>
 
-    <div id="j_dialog" title="Important Info">
+    <div id="j_dialog" class="diabox" title="Important Info">
         <p>
             To know details about each country ,tap/click on the map of each country
         </p>
@@ -478,8 +478,8 @@
             $("#j_dialog").dialog({
                 autoOpen: true,
                 modal: true,
-                width: 350,
-                height: 300,
+                minwidth: 300,
+                minheight: 150,
                 open: function() {
                     jQuery('.ui-widget-overlay').on('click', function() {
                         jQuery('#j_dialog').dialog('close');
