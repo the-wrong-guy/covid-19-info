@@ -43,6 +43,8 @@
         <div id="j_dialog" title="Important Info">
             <p>To search details about USA ,type/enter US instead US,America or United states of america<br><br>
                 All the information are not 100% accurate,just like Dettol only kills 99.9% germs
+                
+                <br><br>Also check the Global details in map ,by clicking the link below
             </p>
         </div>
         <header>
@@ -76,7 +78,7 @@
             <div class="Cinfo"><label>Total Death</label><span class="Cspan Cspan-2" id="Total-dea-co"></span></div>
             <div class="Cinfo"><label>Total Recovered</label><span class="Cspan Cspan-3" id="Total-recovered-co"></span></div>
         </form>
-        <div><a href="map.html">click</a></div>
+        <div id="mapLink"><a class="linkMap" href="map.html">open map</a></div>
         <footer id="credits">
             <p>Made by Bhargab, follow me<i class="fab fa-instagram"></i></p>
         </footer>
@@ -92,7 +94,7 @@
                 autoOpen: true,
                 modal: true,
                 width: 340,
-                height: 230,
+                height: 255,
                 open: function() {
                     jQuery('.ui-widget-overlay').on('click', function() {
                         jQuery('#j_dialog').dialog('close');

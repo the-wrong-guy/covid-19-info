@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta&family=Baloo+Thambi+2&family=Vollkorn:wght@600&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html,body{
+html,
+body {
     background-color: #252423;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     position: relative;
     text-align: center;
     color: #fff;
@@ -26,7 +27,7 @@ header{
 
 
 /*Loader*/
-.loader_bg{
+.loader_bg {
     position: fixed;
     z-index: 1000;
     background: #fff;
@@ -34,7 +35,7 @@ header{
     height: 100%;
 }
 
-.loader{
+.loader {
     border: 0 solid transparent;
     border-radius: 50%;
     width: 150px;
@@ -44,13 +45,14 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
-/*
+    /*
     top: calc(50vh-75px);
     left: calc(50vw-75px);
 */
 }
 
-.loader:before, .loader:after{
+.loader:before,
+.loader:after {
     content: '';
     border: 1em solid #ff5733;
     border-radius: 50%;
@@ -63,19 +65,21 @@ header{
     opacity: 0;
 }
 
-.loader:before{
+.loader:before {
     animation-delay: .3s;
 }
 
-@keyframes loader{
-    0%{
+@keyframes loader {
+    0% {
         transform: scale(0);
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         opacity: 0;
     }
@@ -87,14 +91,14 @@ header{
 
 /* For Global Information */
 
-#Globalinfo{
+#Globalinfo {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding:2em;
+    padding: 2em;
 }
 
-.Sinfo{
+.Sinfo {
     padding: 5px;
     text-transform: uppercase;
     color: antiquewhite;
@@ -103,26 +107,26 @@ header{
     justify-content: center;
 }
 
-label{
+label {
     width: 250px;
-  display: inline-block;
+    display: inline-block;
 }
 
-.ispan{
+.ispan {
     font-family: 'Mukta', sans-serif;
     margin-left: 1em;
 }
- 
 
-.ispan-1{
+
+.ispan-1 {
     color: #FFFF00;
 }
 
-.ispan-2{
+.ispan-2 {
     color: red;
 }
 
-.ispan-3{
+.ispan-3 {
     color: green;
 }
 
@@ -131,7 +135,7 @@ label{
 
 /* Seach bar */
 
-.title{
+.title {
     position: relative;
     color: #fff;
     text-align: center;
@@ -140,7 +144,7 @@ label{
     letter-spacing: 2px;
 }
 
-.query{
+.query {
     position: relative;
     margin-top: 2em;
     left: 50%;
@@ -154,9 +158,11 @@ label{
     background: rgb(168, 231, 19);
     transition: all 0.3s ease;
 }
+
 .search-form.focus {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 }
+
 .search-input {
     position: absolute;
     top: 10px;
@@ -170,9 +176,11 @@ label{
     appearance: none;
     outline: none;
 }
+
 .search-input::-webkit-search-cancel-button {
     appearance: none;
 }
+
 .search-button {
     position: absolute;
     top: 10px;
@@ -186,36 +194,38 @@ label{
     outline: none !important;
     cursor: pointer;
 }
+
 .search-button svg {
     width: 20px;
     height: 20px;
     fill: #5a6674;
 }
 
-#search{
+#search {
     color: #fff;
 }
 
 
 /* for country-wise information */
- 
-#Countryinfo{
+
+#Countryinfo {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding:1em;
-   
+    padding: 1em;
+
 }
-#couName{
+
+#couName {
     font-size: 2em;
-    color:dodgerblue;
+    color: dodgerblue;
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
     font-family: 'Vollkorn', serif;
 }
 
-.Cinfo{
+.Cinfo {
     padding: 5px;
     text-transform: uppercase;
     color: antiquewhite;
@@ -225,37 +235,65 @@ label{
     border: 2px solid #fff;
 }
 
-label{
+label {
     width: 250px;
-  display: inline-block;
+    display: inline-block;
 }
 
-.Cspan{
+.Cspan {
     font-family: 'Mukta', sans-serif;
     margin-left: 1em;
 }
- 
 
-.Cspan-1{
+
+.Cspan-1 {
     color: #FFFF00;
 }
 
-.Cspan-2{
+.Cspan-2 {
     color: red;
 }
 
-.Cspan-3{
+.Cspan-3 {
     color: green;
 }
 
 /* footer */
 
-.wrappper{
+.wrappper {
     min-height: 100%;
     position: relative;
 }
 
-#credits{
+/*map link*/
+
+#mapLink {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.linkMap {
+    position: relative;
+    width: 100px;
+    text-decoration: none;
+    border: 2px solid white;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    padding: 3px;
+    border-radius: 70px;
+    background: linear-gradient(90deg, hsl(226,81%,64%),hsl(271,81%,64%),hsl(316,81%,64%),hsl(1,81%,64%),hsl(46,81%,64%),hsl(91,81%,64%),hsl(136,81%,64%),hsl(181,81%,64%));
+}
+
+
+/*footer*/
+#credits {
     height: 30px;
     width: 100%;
     position: relative;
@@ -264,11 +302,11 @@ label{
     font-family: 'Baloo Thambi 2', cursive;
 }
 
-#credits p{
+#credits p {
     text-align: center;
 }
 
-.fa-instagram{
+.fa-instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -280,54 +318,57 @@ label{
 
 /* responsive */
 
-@media(max-width:450px){
-    
-    body,html{
+@media(max-width:450px) {
+
+    body,
+    html {
         overflow-x: hidden;
         min-height: 50%;
     }
 
-    .search-form{
+    .search-form {
         max-width: 19rem;
     }
-    
+
     .search-input {
-    width: 250px;
-    height: 20px;
-}
+        width: 250px;
+        height: 20px;
+    }
 
 
 }
 
 
 
-@media(min-width:700px){
-    
-    body,html{
+@media(min-width:700px) {
+
+    body,
+    html {
         overflow-x: hidden;
     }
 
-    #Countryinfo{
+    #Countryinfo {
         position: relative;
         max-width: 30%;
         padding: 0;
         left: 35%;
     }
 
-    label{
+    label {
         width: 400px;
-      display: inline-block;
+        display: inline-block;
     }
 
-    .Cinfo{
+    .Cinfo {
         margin-top: 1em;
     }
 
-    #credits{
+    #credits {
         padding: 10px;
         position: relative;
-        top: 6em; /* so social list can be positioned relative to the footer*/
-        text-align: center; /* center the copyright text */
+        top: 6em;
+        /* so social list can be positioned relative to the footer*/
+        text-align: center;
+        /* center the copyright text */
     }
 }
-
