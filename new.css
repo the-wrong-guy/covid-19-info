@@ -249,12 +249,6 @@
                 position: relative;
             }
 
-            .result .result-title {
-                width: 100%;
-                position: relative;
-                display: flex;
-                justify-content: center;
-            }
 
             .container {
                 flex-direction: column;
@@ -265,6 +259,7 @@
             }
 
             .result-title {
+                max-width: 350px;
                 text-align: center;
                 font-size: 3em !important;
             }
