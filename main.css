@@ -21,7 +21,7 @@ header{
     padding: .5em;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
-    border: 1px solid yellow;
+    border: 2px solid yellow;
 }
 
 
@@ -220,6 +220,17 @@ label{
 
 
 /* responsive */
+
+@media(max-width:450px){
+
+    .search-form{
+        max-width: 19rem;
+    }
+
+
+}
+
+
 
 @media(min-width:700px){
 
