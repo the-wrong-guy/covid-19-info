@@ -14,7 +14,10 @@ var totalCountryDea = document.querySelector('.Cspan-2');
 var totalCountryRecovered = document.querySelector('.Cspan-3');
 
 
-
+//insta-redirect
+$(".fa-instagram").click(function(){
+    window.location.href ="https://www.instagram.com/_______the_wrong_guy__________/";
+});
 
 
 $('.search-input').keypress(function(event){
