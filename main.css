@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta&family=Baloo+Thambi+2&family=Vollkorn:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    overflow: hidden;
+    background-color: #252423;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3em;
+    padding: .5em;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    border: 1px solid yellow;
+}
+
+iframe {
+  margin-top: -40px;
+  margin-bottom: -170px;
+  width: 1352px;
+  height: 1000px;
+}
+
+
+/* For Global Information */
+
+#Globalinfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding:2em;
+}
+
+.Sinfo{
+    padding: 5px;
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    width: 250px;
+  display: inline-block;
+}
+
+.ispan{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 1em;
+}
+ 
+
+.ispan-1{
+    color: #FFFF00;
+}
+
+.ispan-2{
+    color: red;
+}
+
+.ispan-3{
+    color: green;
+}
+
+
+
+
+/* Seach bar */
+
+.title{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: .5em;
+    font-family: 'Baloo Thambi 2', cursive;
+    letter-spacing: 2px;
+}
+
+.query{
+    position: relative;
+    margin-top: 2em;
+    left: 50%;
+}
+
+.search-form {
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    transform: translate(-50%, -50%);
+    background: rgb(168, 231, 19);
+    transition: all 0.3s ease;
+}
+.search-form.focus {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 38px;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 290px;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+}
+.search-input::-webkit-search-cancel-button {
+    appearance: none;
+}
+.search-button {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none !important;
+    cursor: pointer;
+}
+.search-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #5a6674;
+}
+
+#search{
+    color: #fff;
+}
+
+
+/* for country-wise information */
+ 
+#Countryinfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+   
+}
+#couName{
+    font-size: 2em;
+    color:dodgerblue;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: 'Vollkorn', serif;
+}
+
+.Cinfo{
+    padding: 5px;
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+label{
+    width: 250px;
+  display: inline-block;
+}
+
+.Cspan{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 1em;
+}
+ 
+
+.Cspan-1{
+    color: #FFFF00;
+}
+
+.Cspan-2{
+    color: red;
+}
+
+.Cspan-3{
+    color: green;
+}
+
+/* footer */
+
+.wrappper{
+    min-height: 100%;
+    position: relative;
+}
+
+#credits{
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: orange;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+#credits p{
+    text-align: center;
+}
+
+.fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1em;
+    margin-left: 4px;
+}
+
+
+
+/* responsive */
+
+@media(min-width:700px){
+
+    #Countryinfo{
+        position: relative;
+        max-width: 30%;
+        padding: 0;
+        left: 35%;
+    }
+
+    label{
+        width: 400px;
+      display: inline-block;
+    }
+
+    .Cinfo{
+        margin-top: 1em;
+    }
+
+    #credits{
+        padding: 10px;
+        position: relative;
+        top: 6em; /* so social list can be positioned relative to the footer*/
+        text-align: center; /* center the copyright text */
+    }
+}
+
