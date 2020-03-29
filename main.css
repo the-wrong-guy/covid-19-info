@@ -7,7 +7,6 @@
 }
 
 html,body{
-    overflow: hidden;
     background-color: #252423;
     height: 100%;
     margin: 0;
@@ -25,12 +24,6 @@ header{
     border: 1px solid yellow;
 }
 
-iframe {
-  margin-top: -40px;
-  margin-bottom: -170px;
-  width: 1352px;
-  height: 1000px;
-}
 
 
 /* For Global Information */
@@ -206,7 +199,7 @@ label{
 #credits{
     height: 30px;
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     color: orange;
     font-family: 'Baloo Thambi 2', cursive;
