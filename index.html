@@ -8,7 +8,7 @@
     <meta name="COVID-19" content="INFORMATI0N">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -40,13 +40,13 @@
             <div class="loader"></div>
         </div>
 
-        <div id="j_dialog" title="Important Info">
+        <!-- <div id="j_dialog" title="Important Info">
             <p>To search details about USA ,type/enter US instead of USA,America or United states of America<br><br>
                 All the information are not 100% accurate,just like Dettol kills only 99.9% of the germs
                 
                 <br><br>Also to check the Global details in Map ,by clicking the "Open Map" button
             </p>
-        </div>
+        </div> -->
         <header>
             <h2>COVID-19 INFO</h2>
         </header>
@@ -89,37 +89,66 @@
             $('.loader_bg').fadeOut();
         }, 1500);
 
-        $(function() {
-            $("#j_dialog").dialog({
-                autoOpen: true,
-                modal: true,
-                width: 340,
-                height: 265,
-                open: function() {
-                    jQuery('.ui-widget-overlay').on('click', function() {
-                        jQuery('#j_dialog').dialog('close');
-                    })
+        function ale() {
+            Swal.fire({
+                icon: 'info',
+                title: '<strong>Important Info</strong>',
+                html: '<p style="font-family:arial;font-size:15px;">To search details about USA ,type/enter US instead of USA,America or United states of America<p>' +
+                    '<p style="font-family:arial;font-size:15px;">All the information are not 100% accurate,just like Dettol kills only 99.9% of the germs</p>' +
+                    '<p style="font-family:arial;font-size:15px;">Also to check the Global details in Map ,by clicking the "Open Map" button</p>',
+                heightAuto: true,
+                showClass: {
+                    popup: 'animated fadeInDown faster'
                 },
-
-                buttons: {
-                    Ok: function() {
-                        $(this).dialog("close");
-                    }
+                hideClass: {
+                    popup: 'animated fadeOutUp faster'
                 },
-                show: {
-                    effect: "bounce",
-                    duration: 1500
-                },
-                hide: {
-                    effect: "fade",
-                    duration: 1000
-                }
-
+                width: 300,
+                padding: '.5rem',
+                background: '#fff',
+                backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://i.gifer.com/1pM2.gif")
+    top
+    no-repeat
+  `
             });
-        });
-        $(".selector").dialog({
-            closeOnEscape: false
-        });
+
+
+        }
+        setTimeout(ale, 1700);
+
+        // $(function() {
+        //     $("#j_dialog").dialog({
+        //         autoOpen: true,
+        //         modal: true,
+        //         width: 340,
+        //         height: 265,
+        //         open: function() {
+        //             jQuery('.ui-widget-overlay').on('click', function() {
+        //                 jQuery('#j_dialog').dialog('close');
+        //             })
+        //         },
+
+        //         buttons: {
+        //             Ok: function() {
+        //                 $(this).dialog("close");
+        //             }
+        //         },
+        //         show: {
+        //             effect: "bounce",
+        //             duration: 1500
+        //         },
+        //         hide: {
+        //             effect: "fade",
+        //             duration: 1000
+        //         }
+
+        //     });
+        // });
+        // $(".selector").dialog({
+        //     closeOnEscape: false
+        // });
 
     </script>
     <script defer src="app.js"></script>
