@@ -106,12 +106,6 @@ function DataFetchCovid() {
                 width: 300,
                 padding: '3em',
                 background: '#fff',
-                backdrop: `
-    rgba(0,0,123,0.4)
-    url("https://i.gifer.com/1pM2.gif")
-    left top
-    no-repeat
-  `
             })
     })
     }
