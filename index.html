@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="main.css">
     <style>
         .ui-dialog {
@@ -93,7 +94,7 @@
                 autoOpen: true,
                 modal: true,
                 width: 340,
-                height: 255,
+                height: 265,
                 open: function() {
                     jQuery('.ui-widget-overlay').on('click', function() {
                         jQuery('#j_dialog').dialog('close');

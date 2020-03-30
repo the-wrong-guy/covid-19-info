@@ -2,8 +2,6 @@
 //const QueryCountry = window.prompt(document.getElementById("inputQ").value);
 //console.log(QueryCountry);
 
-
-const amerika = "US";
  
 //Global Data
 var totalCases = document.querySelector('.ispan-1');
@@ -100,7 +98,21 @@ function DataFetchCovid() {
             console.log(Tconfirmed);
         })
         .catch((err) =>{
-        alert("Yo enter a valid country");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Yo, enter a valid country!',
+                heightAuto : true,
+                width: 300,
+                padding: '3em',
+                background: '#fff',
+                backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://i.gifer.com/1pM2.gif")
+    left top
+    no-repeat
+  `
+            })
     })
     }
     
