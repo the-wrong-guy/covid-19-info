@@ -104,7 +104,7 @@ function DataFetchCovid() {
                 text: 'Yo, enter a valid country!',
                 heightAuto : true,
                 width: 300,
-                padding: '3em',
+                padding: '.5rem',
                 background: '#fff',
             })
     })

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/3ba41c2ebd.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <style>
         
         .ui-dialog .ui-dialog-titlebar {
@@ -454,8 +455,24 @@
                 $(".loader").hide();
 
             }).fail(function() {
-                alert(x.toUpperCase() + " is not in range");
-                $(".loader").hide();
+                // alert(x.toUpperCase() + " is not in range");
+                // $(".loader").hide();
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Yo enter a valid country!',
+                heightAuto : true,
+                width: 300,
+                padding: '.5rem',
+                background: '#fff',
+                backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://i.gifer.com/1pM2.gif")
+    left top
+    no-repeat
+  `
+            })
+
             });
         }
 
