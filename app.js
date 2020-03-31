@@ -45,7 +45,7 @@ function DataFetchCovid() {
     
     if(a == amer)
         {
-            a = "US";
+            am = "US";
             var changeCountry = document.getElementById("couName");
     
         changeCountry.innerHTML = a;

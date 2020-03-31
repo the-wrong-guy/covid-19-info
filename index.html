@@ -36,17 +36,11 @@
 <body>
     <div class="wrapper">
 
-        <div class="loader_bg">
-            <div class="loader"></div>
+        <div class="loader">
+            <img src="https://media.giphy.com/media/YMLSeOfcTQBMN5SOGL/giphy.gif">
+            <p>Loading...</p>
         </div>
 
-        <!-- <div id="j_dialog" title="Important Info">
-            <p>To search details about USA ,type/enter US instead of USA,America or United states of America<br><br>
-                All the information are not 100% accurate,just like Dettol kills only 99.9% of the germs
-                
-                <br><br>Also to check the Global details in Map ,by clicking the "Open Map" button
-            </p>
-        </div> -->
         <header>
             <h2>COVID-19 INFO</h2>
         </header>
@@ -116,39 +110,16 @@
 
 
         }
-        setTimeout(ale, 1700);
+        setTimeout(ale, 1300);
 
-        // $(function() {
-        //     $("#j_dialog").dialog({
-        //         autoOpen: true,
-        //         modal: true,
-        //         width: 340,
-        //         height: 265,
-        //         open: function() {
-        //             jQuery('.ui-widget-overlay').on('click', function() {
-        //                 jQuery('#j_dialog').dialog('close');
-        //             })
-        //         },
+//Pre-Loader
 
-        //         buttons: {
-        //             Ok: function() {
-        //                 $(this).dialog("close");
-        //             }
-        //         },
-        //         show: {
-        //             effect: "bounce",
-        //             duration: 1500
-        //         },
-        //         hide: {
-        //             effect: "fade",
-        //             duration: 1000
-        //         }
+var pre = document.querySelector(".loader");
+        setTimeout(fade, 1100);
 
-        //     });
-        // });
-        // $(".selector").dialog({
-        //     closeOnEscape: false
-        // });
+        function fade() {
+            pre.style.display = 'none';
+        }
 
     </script>
     <script defer src="app.js"></script>
