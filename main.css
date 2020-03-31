@@ -56,6 +56,7 @@ header {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
 }
 
 
@@ -231,7 +232,7 @@ label {
     color: green;
 }
 
-/* footer */
+/* warpper */
 
 .wrappper {
     min-height: 100%;
