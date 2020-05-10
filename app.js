@@ -138,22 +138,24 @@ function DataFetchCovid() {
 //    })
 }
 
-function worldData() {
-    fetch("https://corona.lmao.ninja/all")
+ function worldData() {
+    fetch("https://covid19.mathdro.id/api")
         .then(res => res.json())
         .then(global => {
-            var Tcases = global.cases;
-            var Tdea = global.deaths;
-            var Trecovered = global.recovered;
+            const Tcases = global.confirmed.value;
+            const Tdea = global.deaths.value;
+            const Trecovered = global.recovered.value;
+
+            console.log(Tcases);
+            console.log(Tdea);
+            console.log(Trecovered);
+
 
             //passing the data to html
         totalCases.innerHTML = Tcases;
         totalDea.innerHTML = Tdea;
         totalRecovered.innerHTML = Trecovered;
 
-            console.log(Tcases);
-            console.log(Tdea);
-            console.log(Trecovered);
 
         })
         .catch(err => console.log(err))
