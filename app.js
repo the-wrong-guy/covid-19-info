@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //const QueryCountry = document.getElementById("inputQ").value;
 //const QueryCountry = window.prompt(document.getElementById("inputQ").value);
 //console.log(QueryCountry);
