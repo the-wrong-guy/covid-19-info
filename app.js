@@ -99,6 +99,9 @@ function DataFetchCovid() {
             console.log(Tconfirmed);
         })
         .catch((err) =>{
+             totalCountryCases.innerHTML = '';
+             totalCountryDea.innerHTML = '';
+             totalCountryRecovered.innerHTML ='';
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
