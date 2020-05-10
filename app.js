@@ -110,33 +110,6 @@ function DataFetchCovid() {
             })
     })
     }
-    
-    
-    
-    
-//    fetch("https://pomber.github.io/covid19/timeseries.json")
-//        .then(res => res.json())
-//        .then(data => {
-//            const toFind = data[QueryAPIready];
-//            const lengthOfTheArray = toFind.length - 1;
-//            const Trecovered = toFind[lengthOfTheArray].recovered;
-//            const Tdea = toFind[lengthOfTheArray].deaths;
-//            const Tconfirmed = toFind[lengthOfTheArray].confirmed;
-//
-//            //passing the data
-//             totalCountryCases.innerHTML = Tconfirmed;
-//             totalCountryDea.innerHTML = Tdea;
-//             totalCountryRecovered.innerHTML =Trecovered;
-//
-//
-//
-//            console.log(Trecovered);
-//            console.log(Tdea);
-//            console.log(Tconfirmed);
-//        })
-//        .catch((err) =>{
-//        alert("Yo enter a valid country");
-//    })
 }
 
  function worldData() {
