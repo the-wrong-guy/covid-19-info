@@ -67,9 +67,9 @@ function DataFetchCovid() {
 
 
 
-            console.log(Trecovered);
-            console.log(Tdea);
-            console.log(Tconfirmed);
+            // console.log(Trecovered);
+            // console.log(Tdea);
+            // console.log(Tconfirmed);
         })
         .catch((err) =>{
         alert("Yo enter a valid country");
@@ -83,7 +83,7 @@ function DataFetchCovid() {
         .then(res => res.json())
         .then(data => {
 
-            
+
             const toFind = data.match.regex;
             const lengthOfTheArray = toFind.length - 1;
             const Trecovered = toFind[lengthOfTheArray].recovered;
