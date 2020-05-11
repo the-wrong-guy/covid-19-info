@@ -84,7 +84,8 @@ function DataFetchCovid() {
         .then(data => {
 
 
-            const toFind = data.match.regex;
+            // const toFind = data.match.regex;
+            const toFind = data[a];
             const lengthOfTheArray = toFind.length - 1;
             const Trecovered = toFind[lengthOfTheArray].recovered;
             const Tdea = toFind[lengthOfTheArray].deaths;
@@ -97,9 +98,9 @@ function DataFetchCovid() {
 
 
 
-            console.log(Trecovered);
-            console.log(Tdea);
-            console.log(Tconfirmed);
+            // console.log(Trecovered);
+            // console.log(Tdea);
+            // console.log(Tconfirmed);
         })
         .catch((err) =>{
              totalCountryCases.innerHTML = '';
