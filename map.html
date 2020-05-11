@@ -443,7 +443,7 @@
     <script>
         function showData(x) {
             $(".loader").show();
-            $.get(`https://corona.lmao.ninja/countries/${x}`, function(data) {
+            $.get(`https://corona.lmao.ninja/v2/countries/${x}`, function(data) {
                 console.log(data);
                 if (data.country) {
                     $(".result-title").html(data.country);

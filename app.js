@@ -48,11 +48,12 @@ function DataFetchCovid() {
         {
             a = "US";
             var changeCountry = document.getElementById("couName");
-    
+            let url ='https://pomber.github.io/covid19/timeseries.json'
         changeCountry.innerHTML = a;
-            fetch("https://pomber.github.io/covid19/timeseries.json")
+            fetch(url)
         .then(res => res.json())
         .then(data => {
+            // string.match(/^abc$/)
             const toFind = data[a];
             const lengthOfTheArray = toFind.length - 1;
             const Trecovered = toFind[lengthOfTheArray].recovered;
@@ -76,12 +77,14 @@ function DataFetchCovid() {
         }
     else{
         var changeCountry = document.getElementById("couName");
-    
         changeCountry.innerHTML = a;
-        fetch("https://pomber.github.io/covid19/timeseries.json")
+        let url ='https://pomber.github.io/covid19/timeseries.json'
+        fetch(url)
         .then(res => res.json())
         .then(data => {
-            const toFind = data[a];
+
+            
+            const toFind = data.match.regex;
             const lengthOfTheArray = toFind.length - 1;
             const Trecovered = toFind[lengthOfTheArray].recovered;
             const Tdea = toFind[lengthOfTheArray].deaths;
