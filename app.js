@@ -109,7 +109,7 @@ function DataFetchCovid() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Enter a valid country! or data not present',
+                text: 'Invalid country name! or data not present!',
                 heightAuto : true,
                 width: 300,
                 padding: '.5rem',
